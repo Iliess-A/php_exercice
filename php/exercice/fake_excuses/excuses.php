@@ -4,7 +4,7 @@
         $name = htmlspecialchars($_POST['childName']);
         $gender = htmlspecialchars($_POST['gender']);
         $teacherName = htmlspecialchars($_POST['teacherName']);
-        $illness = htmlspecialchars($_POST['illness']);
+        $illness = htmlspecialchars($_POST['absenceReason']);
         if (empty($name) || empty($illness) || empty($gender) || empty($teacherName)) {
             echo "one of the field is empty";
         } else {
@@ -21,6 +21,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="/assets/js/script.js"></script>
     <title>fake excuses generator</title>
 </head>
 <body>
