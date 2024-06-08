@@ -2,9 +2,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: yellow;
+    background-color: brown;
+    main{
+        .confirm{
+            list-style-type: none;
+        }
+        width: 50vw;
+    }
 }
 
-.confirm{
-    list-style-type: none;
-}

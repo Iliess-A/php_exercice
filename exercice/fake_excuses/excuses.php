@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script defer src="/assets/js/script.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="./assets/js/script.js"></script>
     <title>fake excuses generator</title>
 </head>
 <body>
@@ -40,25 +40,29 @@
     </header>
 
     <main>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // collect value of input field
-        $name = htmlspecialchars($_POST['childName']);
-        $gender = htmlspecialchars($_POST['gender']);
-        $teacherName = htmlspecialchars($_POST['teacherName']);
-        $illness = htmlspecialchars($_POST['absenceReason']);
-        if (empty($name) || empty($illness) || empty($gender) || empty($teacherName)) {
-            echo "one of the field is empty";
-        } else {
-            echo "<ul class ='confirm'>";
-            echo "<li>name : ",$name,"</li>";
-            echo "<li>gender : ",$gender,"</li>";
-            echo "<li>teacher : ", $teacherName,"</li>";
-            echo "<li>illness : ", $illness,"</li>";
-            echo "</ul>";
-        }
-    }
-        ?>
+
+        <div>
+            <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    // collect value of input field
+                    $name = htmlspecialchars($_POST['childName']);
+                    $gender = htmlspecialchars($_POST['gender']);
+                    $teacherName = htmlspecialchars($_POST['teacherName']);
+                    $illness = htmlspecialchars($_POST['absenceReason']);
+                    if (empty($name) || empty($illness) || empty($gender) || empty($teacherName)) {
+                        echo "one of the field is empty";
+                    } else {
+                        echo "<ul class ='confirm'>";
+                        echo "<li>name : ",$name,"</li>";
+                        echo "<li>gender : ",$gender,"</li>";
+                        echo "<li>teacher : ", $teacherName,"</li>";
+                        echo "<li>illness : ", $illness,"</li>";
+                        echo "</ul>";
+                    }
+                }
+            ?>
+        </div>
+    
     </main>
     
     <footer><p>&copy; by Iliess</p></footer>

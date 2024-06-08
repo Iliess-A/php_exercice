@@ -2,5 +2,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: yellow;
+  background-color: brown;
+}
+body main {
+  width: 50vw;
+}
+body main .confirm {
+  list-style-type: none;
 }/*# sourceMappingURL=style.css.map */
