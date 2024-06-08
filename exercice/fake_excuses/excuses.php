@@ -1,20 +1,4 @@
-<?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // collect value of input field
-        $name = htmlspecialchars($_POST['childName']);
-        $gender = htmlspecialchars($_POST['gender']);
-        $teacherName = htmlspecialchars($_POST['teacherName']);
-        $illness = htmlspecialchars($_POST['absenceReason']);
-        if (empty($name) || empty($illness) || empty($gender) || empty($teacherName)) {
-            echo "one of the field is empty";
-        } else {
-            echo "name : ",$name,"<br>";
-            echo "gender : ",$gender,"<br>";
-            echo "teacher : ", $teacherName,"<br>";
-            echo "illness : ", $illness,"<br>";
-        }
-    }
-        ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +40,25 @@
     </header>
 
     <main>
-
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // collect value of input field
+        $name = htmlspecialchars($_POST['childName']);
+        $gender = htmlspecialchars($_POST['gender']);
+        $teacherName = htmlspecialchars($_POST['teacherName']);
+        $illness = htmlspecialchars($_POST['absenceReason']);
+        if (empty($name) || empty($illness) || empty($gender) || empty($teacherName)) {
+            echo "one of the field is empty";
+        } else {
+            echo "<ul class ='confirm'>";
+            echo "<li>name : ",$name,"</li>";
+            echo "<li>gender : ",$gender,"</li>";
+            echo "<li>teacher : ", $teacherName,"</li>";
+            echo "<li>illness : ", $illness,"</li>";
+            echo "</ul>";
+        }
+    }
+        ?>
     </main>
     
     <footer><p>&copy; by Iliess</p></footer>
