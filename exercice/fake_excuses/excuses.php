@@ -58,6 +58,33 @@
                         echo "<li>teacher : ", $teacherName,"</li>";
                         echo "<li>illness : ", $illness,"</li>";
                         echo "</ul>";
+
+                        //here a table with diferrente excuses with a switch and a random i'll select the randome text :
+
+                        $_illnessTab = array('1','2','3','4','5');
+                        $_deathTab = array('1','2','3','4','5');
+                        $_activityTab = array('1','2','3','4','5');
+                        $_otherTab = array('1','2','3','4','5');
+
+                        switch ($illness) {
+
+                            case "illness":
+                                //random from tab illness
+                                echo date('d-m-Y') ," text number : ", array_rand($_illnessTab);
+                                break;
+
+                            case "death":
+                                echo date('d-m-Y') ," text number : ", array_rand($_deathTab);
+                                break;
+                            
+                            case "activity":
+                                echo date('d-m-Y') ," text number : ", array_rand($_activityTab);
+                                break;
+                            
+                            case "other":
+                                echo date('d-m-Y') ," text number : ", array_rand($_otherTab);
+                                break;
+                        }
                     }
                 }
             ?>
