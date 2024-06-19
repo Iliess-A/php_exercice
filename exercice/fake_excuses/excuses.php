@@ -89,7 +89,17 @@
                 }
             ?>
         </div>
-    
+                
+        <div class="country">
+            <select name="country" id="country">
+                <?php
+                    $country= array('BE'=>'Belgique','DZ'=>'Algerie','FR'=>'France');
+                    foreach ($country as $key => $value) {
+                        echo "<option value=",$key,">",$value,"</option>";
+                    }
+                 ?>
+            </select>
+        </div>
     </main>
     
     <footer><p>&copy; by Iliess</p></footer>
