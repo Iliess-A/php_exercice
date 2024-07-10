@@ -32,6 +32,9 @@ class beverage{
         echo "This beverage is $this->temp and $this->color.\n";
     }
 
+    public function getColor(){
+        return $this->color;
+    }
 };
 //------------------------------------------------------------------------
 class beer extends beverage{
@@ -52,7 +55,7 @@ class beer extends beverage{
     }
     private function beerInfo()
     {
-        echo "Hi i'm $this->name and have an alcochol percentage of $this->alcoholPercentage and I have a $this->color color.\n";
+        echo "Hi i'm $this->name and have an alcochol percentage of $this->alcoholPercentage and I have a {$this->getColor()} color.\n";
     }
 }
 

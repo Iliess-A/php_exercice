@@ -10,9 +10,9 @@ TODO: Don't call getters in de child class.
 USE TYPEHINTING EVERYWHERE!
 */
 class beverage {
-    protected string $color; // Change to protected
-    private float $price;
-    private string $temp;
+    protected string $color;
+    protected float $price;
+    protected string $temp;
 
     public function __construct($color, $price, $temp = 'cold') {
         $this->color = $color;
@@ -26,8 +26,8 @@ class beverage {
 }
 
 class beer extends beverage {
-    private string $name;
-    private float $alcoholPercentage;
+    protected string $name;
+    protected float $alcoholPercentage;
 
     public function __construct($color, $price, $alcoholPercentage, $name, $temp = 'cold') {
         parent::__construct($color, $price, $temp);
@@ -46,6 +46,7 @@ class beer extends beverage {
 }
 
 $sakra = new beer('light', 3.5, 8.5, 'Duvel');
+
 
 $sakra->return_alcoholPercentage();
 $sakra->return_string();
