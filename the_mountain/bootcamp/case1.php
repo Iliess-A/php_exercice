@@ -40,3 +40,38 @@ function tva($som,$prcnt){
 }
 
 basketamount($basket);
+
+//========================================================== same code with classes :
+
+class marketItems{
+
+    public string $name;
+    public float $price;
+    public float $tva;
+    public int $quantity;
+
+    public function __construct(string $name,float $price,float $tva,int $quantity){
+
+        $this->name=$name;
+        $this->price=$price;
+        $this->tva=$tva;
+        $this->quantity=$quantity;
+
+    }
+
+    public function getTotalPricehtv():float
+    {
+        return $this->quantity*$this->price;
+    }
+
+    public function getTotalPriceTvc():float
+    {
+        return $this->getTotalPricehtv()+$this->getTotalPricehtv()*$this->tva;
+    }
+}
+
+$banana = new marketItems('banana',1,0.06,6);
+$apple = new marketItems('apple',1.5,0.06,3);
+$wine = new marketItems('wine',10,0.21,2);
+
+var_dump( $banana->getTotalPriceTvc() + $apple->getTotalPriceTvc() + $wine->getTotalPriceTvc());
