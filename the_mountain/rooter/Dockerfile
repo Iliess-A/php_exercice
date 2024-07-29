@@ -17,6 +17,7 @@ FROM php:apache
 
 # Copy app files from the app directory.
 COPY . /var/www/html
+# this is to do pdo request.
 RUN apt-get update && apt-get install -y 
 RUN a2enmod rewrite
 RUN docker-php-ext-install pdo pdo_mysql
