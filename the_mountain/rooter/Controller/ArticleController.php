@@ -1,5 +1,8 @@
 <?php
 
+namespace Rooter\Controller;
+
+use Rooter\Model\Article;
 declare(strict_types = 1);
 
 class ArticleController

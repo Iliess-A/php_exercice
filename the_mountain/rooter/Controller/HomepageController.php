@@ -1,4 +1,7 @@
 <?php
+
+namespace Rooter\Controller;
+
 declare(strict_types = 1);
 
 class HomepageController

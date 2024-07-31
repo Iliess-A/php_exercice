@@ -2,15 +2,18 @@
 
 declare(strict_types=1);
 
+namespace Rooter;
+
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 //include all your model files here
-require 'Model/Article.php';
+use Rooter\Model\Article;
+use Rooter\Model\Router;
 //include all your controllers here
-require 'Controller/HomepageController.php';
-require 'Controller/ArticleController.php';
+use Rooter\Controller\HomepageController;
+use Rooter\Controller\ArticleController;
 
 // Get the current page to load
 // If nothing is specified, it will remain empty (home should be loaded)

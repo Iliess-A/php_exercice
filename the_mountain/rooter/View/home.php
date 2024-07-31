@@ -1,4 +1,7 @@
-<?php require 'View/includes/header.php'?>
+<?php 
+namespace Rooter\View; 
+require 'View/includes/header.php'
+?>
 
 <?php // Use any data loaded in the controller here ?>
 
