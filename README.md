@@ -1,2 +1,2 @@
-# php_exercice
-exercice de php/phpdrill
+# Php_exercice
+## Ce repository contient mes exercices en Php.
